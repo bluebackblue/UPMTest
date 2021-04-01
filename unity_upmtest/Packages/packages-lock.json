@@ -5,21 +5,21 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "5ca2f121e4afdeaff0b1b7d965aaabb20f28c686"
+      "hash": "8e432cd3917fb36f04a2d4421c57a243e323e183"
     },
     "blueback.jsonitem": {
       "version": "https://github.com/bluebackblue/JsonItem.git?path=unity_JsonItem/Assets/UPM",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "2edc440ef1bc4f6750b32bd6fee8c003487ea4c1"
+      "hash": "f99eedee7a4abf28580e59862d6c5fe4f73cbd33"
     },
     "blueback.testlib": {
       "version": "https://github.com/bluebackblue/TestLib.git?path=unity_TestLib/Assets/UPM",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "e1407b6c139c1b26e03b08c80daf32918b4f9925"
+      "hash": "9f2fa5a776f9c9d640e17d5ef406c29300555337"
     },
     "com.unity.collab-proxy": {
       "version": "1.3.9",
