@@ -2,6 +2,7 @@
   "dependencies": {
     "blueback.assetlib": "https://github.com/bluebackblue/AssetLib.git?path=unity_AssetLib/Assets/UPM",
     "blueback.jsonitem": "https://github.com/bluebackblue/JsonItem.git?path=unity_JsonItem/Assets/UPM",
+    "blueback.slackwebapi": "https://github.com/bluebackblue/SlackWebApi.git?path=unity_SlackWebApi/Assets/UPM",
     "blueback.testlib": "https://github.com/bluebackblue/TestLib.git?path=unity_TestLib/Assets/UPM",
     "com.unity.collab-proxy": "1.3.9",
     "com.unity.ide.rider": "2.0.7",

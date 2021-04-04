@@ -5,21 +5,28 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "8e432cd3917fb36f04a2d4421c57a243e323e183"
+      "hash": "dfbdf45071d2471e7dca81f0a338ca4b1a14cc70"
     },
     "blueback.jsonitem": {
       "version": "https://github.com/bluebackblue/JsonItem.git?path=unity_JsonItem/Assets/UPM",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "f99eedee7a4abf28580e59862d6c5fe4f73cbd33"
+      "hash": "ee005c777938769faf7bac8526471984b484a3b4"
+    },
+    "blueback.slackwebapi": {
+      "version": "https://github.com/bluebackblue/SlackWebApi.git?path=unity_SlackWebApi/Assets/UPM",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "2d0ff323f8bf8765db7120c7f8b38cab18352421"
     },
     "blueback.testlib": {
       "version": "https://github.com/bluebackblue/TestLib.git?path=unity_TestLib/Assets/UPM",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "9f2fa5a776f9c9d640e17d5ef406c29300555337"
+      "hash": "511d1beaefa3fe65772c311ae80f8f045ad9193d"
     },
     "com.unity.collab-proxy": {
       "version": "1.3.9",
