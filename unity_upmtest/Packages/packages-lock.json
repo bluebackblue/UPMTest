@@ -1,35 +1,35 @@
 {
   "dependencies": {
     "blueback.assetlib": {
-      "version": "https://github.com/bluebackblue/AssetLib.git?path=unity_AssetLib/Assets/UPM",
+      "version": "https://github.com/bluebackblue/AssetLib.git?path=unity_AssetLib/Assets/UPM#0.0.8",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "3d40f245d4482090492e35c7f19066e575ff0611"
+      "hash": "f99a00817b65bc34a356389441634d51a963e1ee"
     },
     "blueback.excel": {
-      "version": "https://github.com/bluebackblue/Excel.git?path=unity_Excel/Assets/UPM",
+      "version": "https://github.com/bluebackblue/Excel.git?path=unity_Excel/Assets/UPM#0.0.3",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "128f23ac54cf9fc227ef312111c2ba515f53378a"
+      "hash": "0ecd9dd0fb7a8b0075db641cd6684158bd9a93f2"
     },
     "blueback.jsonitem": {
-      "version": "https://github.com/bluebackblue/JsonItem.git?path=unity_JsonItem/Assets/UPM",
+      "version": "https://github.com/bluebackblue/JsonItem.git?path=unity_JsonItem/Assets/UPM#0.0.6",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "fa6bfccc7f513833010f4337486f61648acad249"
+      "hash": "2e3911ffb392bc94465b1b6c446e8fdf22dad21d"
     },
     "blueback.slackwebapi": {
-      "version": "https://github.com/bluebackblue/SlackWebApi.git?path=unity_SlackWebApi/Assets/UPM",
+      "version": "https://github.com/bluebackblue/SlackWebApi.git?path=unity_SlackWebApi/Assets/UPM#0.0.4",
       "depth": 0,
       "source": "git",
       "dependencies": {},
       "hash": "edd9edd8e616d77bd7b637f5b719b5b3bac4fcf1"
     },
     "blueback.testlib": {
-      "version": "https://github.com/bluebackblue/TestLib.git?path=unity_TestLib/Assets/UPM",
+      "version": "https://github.com/bluebackblue/TestLib.git?path=unity_TestLib/Assets/UPM#0.0.11",
       "depth": 0,
       "source": "git",
       "dependencies": {},
