@@ -1,39 +1,39 @@
 {
   "dependencies": {
     "blueback.assetlib": {
-      "version": "https://github.com/bluebackblue/AssetLib.git?path=unity_AssetLib/Assets/UPM#0.0.8",
+      "version": "https://github.com/bluebackblue/AssetLib.git?path=unity_AssetLib/Assets/UPM",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "f99a00817b65bc34a356389441634d51a963e1ee"
+      "hash": "119ca30370fcd0b1331c0596d9f5849eb8d52144"
     },
     "blueback.excel": {
-      "version": "https://github.com/bluebackblue/Excel.git?path=unity_Excel/Assets/UPM#0.0.3",
+      "version": "https://github.com/bluebackblue/Excel.git?path=unity_Excel/Assets/UPM",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "0ecd9dd0fb7a8b0075db641cd6684158bd9a93f2"
+      "hash": "3e976838aa95d6ed0da76a0e509d0a3576137f4a"
     },
     "blueback.jsonitem": {
-      "version": "https://github.com/bluebackblue/JsonItem.git?path=unity_JsonItem/Assets/UPM#0.0.6",
+      "version": "https://github.com/bluebackblue/JsonItem.git?path=unity_JsonItem/Assets/UPM",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "2e3911ffb392bc94465b1b6c446e8fdf22dad21d"
+      "hash": "45f9ed03fe85b836ade13d075778b3d8aebedb34"
     },
     "blueback.slackwebapi": {
-      "version": "https://github.com/bluebackblue/SlackWebApi.git?path=unity_SlackWebApi/Assets/UPM#0.0.4",
+      "version": "https://github.com/bluebackblue/SlackWebApi.git?path=unity_SlackWebApi/Assets/UPM",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "edd9edd8e616d77bd7b637f5b719b5b3bac4fcf1"
+      "hash": "2a20bd3ea40ca0808da6c22836264a4943deff70"
     },
     "blueback.testlib": {
-      "version": "https://github.com/bluebackblue/TestLib.git?path=unity_TestLib/Assets/UPM#0.0.11",
+      "version": "https://github.com/bluebackblue/TestLib.git?path=unity_TestLib/Assets/UPM",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "7435b9e19594b12d4c2e47e29788d73ccbcc65f5"
+      "hash": "526d7b0780d314f40047ee6565cf1bd279bd742d"
     },
     "com.unity.collab-proxy": {
       "version": "1.3.9",
