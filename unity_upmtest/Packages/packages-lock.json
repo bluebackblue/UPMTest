@@ -33,7 +33,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "c4626404859fe77a7a6da995b5f18eb3a4714ce1"
+      "hash": "65001c59d217a509030ae0746163c160d6366cce"
     },
     "blueback.scene": {
       "version": "https://github.com/bluebackblue/Scene.git?path=unity_Scene/Assets/UPM#0.0.2",
@@ -113,6 +113,13 @@
     },
     "com.unity.ide.vscode": {
       "version": "1.2.3",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.inputsystem": {
+      "version": "1.0.0",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
