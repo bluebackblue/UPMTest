@@ -1,0 +1,27 @@
+{
+    "name": "ComparePackagWithLocal",
+    "rootNamespace": "",
+    "references": [
+        "GUID:d9fbbca419fceae48a338c806e9e3d07",
+        "GUID:851ead64da1dd9a40aec33e5244d17a0"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [
+        ""
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "blueback.assetlib",
+            "expression": "",
+            "define": "DEF_BLUEBACK_ASSETLIB"
+        }
+    ],
+    "noEngineReferences": false
+}

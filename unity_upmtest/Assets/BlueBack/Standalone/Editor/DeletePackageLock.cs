@@ -14,7 +14,7 @@ namespace BlueBack.Standalone.Editor
 {
 	/** DeletePackageLock
 	*/
-	public class DeletePackageLock
+	public static class DeletePackageLock
 	{
 		/** MenuITem_BlueBack_DeletePackageLock
 
@@ -22,7 +22,7 @@ namespace BlueBack.Standalone.Editor
 
 		*/
 		[UnityEditor.MenuItem("BlueBack/DeletePackageLock")]
-		public static void MenuITem_BlueBack_DeletePackageLock()
+		private static void MenuITem_BlueBack_DeletePackageLock()
 		{
 			string t_path = UnityEngine.Application.dataPath + "/../Packages/packages-lock.json";
 			UnityEngine.Debug.Log(t_path);

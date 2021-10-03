@@ -14,7 +14,7 @@ namespace BlueBack.Standalone.Editor
 {
 	/** InstallAllPackage
 	*/
-	public class InstallAllPackage
+	public static class InstallAllPackage
 	{
 		/** LIST
 		*/
@@ -47,7 +47,7 @@ namespace BlueBack.Standalone.Editor
 
 		*/
 		[UnityEditor.MenuItem("BlueBack/InstallAllPackage")]
-		public static void MenuITem_BlueBackl_InstallAllPackage()
+		private static void MenuITem_BlueBackl_InstallAllPackage()
 		{
 			//読み込み。
 			string t_text;
@@ -78,7 +78,11 @@ namespace BlueBack.Standalone.Editor
 					}
 				}
 
+				#if(true)
 				t_text = AddPackage(t_text,LIST[ii*2],t_url);
+				#else
+				UnityEditor.PackageManager.Client.Add(t_url);
+				#endif
 			}
 
 			//書き込み。
