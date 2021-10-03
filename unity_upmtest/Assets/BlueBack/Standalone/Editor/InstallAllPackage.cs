@@ -61,12 +61,15 @@ namespace BlueBack.Standalone.Editor
 				t_text = RemovePackage(t_text,LIST[ii*2]);
 			}
 
+			//追加。
 			for(int ii=0;ii<(LIST.Length / 2);ii++){
 				string t_url = URL.Replace("<<Auther>>",AUTHER).Replace("<<Name>>",LIST[ii*2+1]);
 
+				//リリース名がバージョン。
 				{
-					string t_version = GetLastVersion(AUTHER,LIST[ii*2+1]);
+					string t_version = GetLastReleaseNameFromGitHub.Connect(AUTHER,LIST[ii*2+1]);
 					if(t_version == null){
+						//アクセス制限にかかった。
 						t_url = t_url.Replace("<<Version>>","");
 					}else if(t_version.Length <= 0){
 						t_url = t_url.Replace("<<Version>>","");
@@ -104,59 +107,6 @@ namespace BlueBack.Standalone.Editor
 				UnityEngine.Debug.Log("RemovePackage : " + a_packagename);
 				return a_a_match.Groups["before"].Value + "\n" +  a_a_match.Groups["after"].Value;
 			},System.Text.RegularExpressions.RegexOptions.Multiline);
-		}
-
-		/** ダウンロード。
-		*/
-		private static byte[] DownLoad(string a_url)
-		{
-			try{
-				using(UnityEngine.Networking.UnityWebRequest t_webrequest = ((System.Func<UnityEngine.Networking.UnityWebRequest>)(()=>{
-					return UnityEngine.Networking.UnityWebRequest.Get(a_url);
-				}))()){
-					UnityEngine.Networking.UnityWebRequestAsyncOperation t_async = t_webrequest.SendWebRequest();
-					while(true){
-						System.Threading.Thread.Sleep(1);
-						if(t_async.isDone == true){
-							if(t_webrequest.error != null){
-								UnityEngine.Debug.LogError(a_url + " : " + t_webrequest.error);
-								return null;
-							}else{
-								return t_webrequest.downloadHandler.data;
-							}
-						}
-					}
-				}
-			}catch(System.Exception t_exception){
-				UnityEngine.Debug.LogError(a_url + " : " + t_exception.Message + "\n" + t_exception.StackTrace);
-				return null;
-			}
-		}
-
-		/** GetLastVersion
-		*/
-		private static string GetLastVersion(string a_auther,string a_reposname)
-		{
-			try{
-				byte[] t_binary = DownLoad("https://api.github.com/repos/" + a_auther + "/" + a_reposname + "/releases/latest");
-				if(t_binary != null){
-					string t_text = System.Text.Encoding.UTF8.GetString(t_binary,0,t_binary.Length);
-					System.Text.RegularExpressions.Match t_match = System.Text.RegularExpressions.Regex.Match(t_text,".*(?<name>\\\"name\\\")\\s*\\:\\s*\\\"(?<value>[a-zA-Z0-9_\\.]*)\\\".*");
-					t_text = t_match.Groups["value"].Value;
-					if(t_text != null){
-						return t_text;
-					}else{
-						UnityEngine.Debug.LogError(a_auther + " : " + a_reposname + " : text == null");
-						return null;
-					}
-				}else{
-					UnityEngine.Debug.LogError(a_auther + " : " + a_reposname + " : binary == null");
-					return null;
-				}
-			}catch(System.Exception t_exception){
-				UnityEngine.Debug.LogError(a_auther + " : " + a_reposname + " : " + t_exception.Message + "\n" + t_exception.StackTrace);
-				return null;
-			}
 		}
 	}
 }
