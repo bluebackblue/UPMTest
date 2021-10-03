@@ -75,7 +75,7 @@ namespace BlueBack.Standalone.Editor
 					}
 				}
 
-				AddPackage(t_text,LIST[0],t_url);
+				t_text = AddPackage(t_text,LIST[ii*2],t_url);
 			}
 
 			//書き込み。
