@@ -20,6 +20,7 @@ namespace BlueBack.Standalone.Editor
 		*/
 		private readonly static string[] LIST = new string[]{
 			"blueback.assetlib",			"AssetLib",
+			"blueback.audio",				"Audio",
 			"blueback.code",				"Code",
 			"blueback.excel",				"Excel",
 			"blueback.jsonitem",			"JsonItem",
