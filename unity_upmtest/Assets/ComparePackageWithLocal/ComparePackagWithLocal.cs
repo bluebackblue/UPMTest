@@ -18,6 +18,7 @@ namespace ComparePackagWithLocal
 	{
 		/** LIST
 		*/
+		/*
 		private readonly static string[] LIST = new string[]{
 			"blueback.assetlib",			"AssetLib",
 			"blueback.code",				"Code",
@@ -32,6 +33,7 @@ namespace ComparePackagWithLocal
 			"blueback.unityplayerloop",		"UnityPlayerLoop",
 			"blueback.upmversionmanager",	"UpmVersionManager",
 		};
+		*/
 
 		/** CompareItem
 		*/
@@ -58,39 +60,56 @@ namespace ComparePackagWithLocal
 				}else{
 					foreach(UnityEditor.PackageManager.PackageInfo t_packageinfo in t_request.Result){
 						if(System.Text.RegularExpressions.Regex.IsMatch(t_packageinfo.name,"^blueback\\.[a-zA-Z0-9_\\.]*$",System.Text.RegularExpressions.RegexOptions.Multiline) == true){
-							UnityEngine.Debug.Log(t_packageinfo.name + " : " + t_packageinfo.displayName);
-
-							string t_local_path = "..\\..\\..\\" + t_packageinfo.displayName + "\\unity_" + t_packageinfo.displayName + "\\Assets\\UPM\\";
-
+							string t_local_path = null;
 							{
-								System.Collections.Generic.List<string> t_filelist_package = BlueBack.AssetLib.Editor.FileNameList.CreateAllFileNameListFromFullPath(t_packageinfo.resolvedPath);
-								System.Collections.Generic.List<string> t_filelist_local =  BlueBack.AssetLib.Editor.FileNameList.CreateAllFileNameListFromAssetsPath(t_local_path);
-
-								System.Collections.Generic.Dictionary<string,CompareItem> t_list = new System.Collections.Generic.Dictionary<string,CompareItem>();
-
-								foreach(string t_path in t_filelist_package){
-									string t_key = System.Text.RegularExpressions.Regex.Replace(t_path,"^(?<before>.*\\\\PackageCache\\\\)([a-zA-Z_\\.]*\\@[a-zA-Z0-9]*\\\\)(?<value>.*)$",(System.Text.RegularExpressions.Match a_a_match)=>{
-										return a_a_match.Groups["value"].Value;
-									},System.Text.RegularExpressions.RegexOptions.Multiline);
-									t_list.Add(t_key,new CompareItem(){
-										path_local = null,
-										path_package = t_path
-									});
+								switch(t_packageinfo.name){
+								case "blueback.assetlib":			t_local_path += "..\\..\\..\\"	+	"UpmAssetLib"			+	"\\"	+"BlueBackAssetLib"				+ "\\Assets\\UPM";break;
+								case "blueback.code":				t_local_path += "..\\..\\..\\"	+	"UpmCode"				+	"\\"	+"BlueBackCode"					+ "\\Assets\\UPM";break;
+								case "blueback.excel":				t_local_path += "..\\..\\..\\"	+	"UpmExcel"				+	"\\"	+"BlueBackExcel"				+ "\\Assets\\UPM";break;
+								case "blueback.jsonitem":			t_local_path += "..\\..\\..\\"	+	"UpmJsonItem"			+	"\\"	+"BlueBackJsonItem"				+ "\\Assets\\UPM";break;
+								case "blueback.mouse":				t_local_path += "..\\..\\..\\"	+	"UpmMouse"				+	"\\"	+"BlueBackMouse"				+ "\\Assets\\UPM";break;
+								case "blueback.pad":				t_local_path += "..\\..\\..\\"	+	"UpmPad"				+	"\\"	+"BlueBackPad"					+ "\\Assets\\UPM";break;
+								case "blueback.scene":				t_local_path += "..\\..\\..\\"	+	"UpmScene"				+	"\\"	+"BlueBackScene"				+ "\\Assets\\UPM";break;
+								case "blueback.slackwebapi":		t_local_path += "..\\..\\..\\"	+	"UpmSlackWebApi"		+	"\\"	+"BlueBackSlackWebApi"			+ "\\Assets\\UPM";break;
+								case "blueback.testlib":			t_local_path += "..\\..\\..\\"	+	"UpmTestLib"			+	"\\"	+"BlueBackTestLib"				+ "\\Assets\\UPM";break;
+								case "blueback.timescale":			t_local_path += "..\\..\\..\\"	+	"UpmTimeScale"			+	"\\"	+"BlueBackTimeScale"			+ "\\Assets\\UPM";break;
+								case "blueback.unityplayerloop":	t_local_path += "..\\..\\..\\"	+	"UpmUnityPlayerLoop"	+	"\\"	+"BlueBackUnityPlayerLoop"		+ "\\Assets\\UPM";break;
+								case "blueback.upmversionmanager":	t_local_path += "..\\..\\..\\"	+	"UpmVersionManager"		+	"\\"	+"BlueBackUpmVersionManager"	+ "\\Assets\\UPM";break;
 								}
+							}
 
-								foreach(string t_path in t_filelist_local){
-									string t_key = t_path.Replace(t_local_path,"");
-									if(t_list.TryGetValue(t_key,out CompareItem t_compareitem) == true){
-										t_compareitem.path_local = t_path;
-									}else{
-										t_list.Add(t_key,new CompareItem(){
-											path_local = t_path,
-											path_package = null
+							if(t_local_path != null){
+								UnityEngine.Debug.Log(t_packageinfo.name + " : " + t_packageinfo.displayName);
+
+								System.Collections.Generic.Dictionary<string,CompareItem> t_structure_list = new System.Collections.Generic.Dictionary<string,CompareItem>();
+
+								{
+									System.Collections.Generic.List<string> t_filelist_package = BlueBack.AssetLib.Editor.FileNameList.CreateAllFileNameListFromFullPath(t_packageinfo.resolvedPath);
+									foreach(string t_path_package in t_filelist_package){
+										string t_key = t_path_package.Substring(t_packageinfo.resolvedPath.Length + 1);
+										t_structure_list.Add(t_key,new CompareItem(){
+											path_local = null,
+											path_package = t_path_package
 										});
 									}
 								}
 
-								foreach(System.Collections.Generic.KeyValuePair<string,CompareItem> t_item in t_list){
+								{
+									System.Collections.Generic.List<string> t_filelist_local =  BlueBack.AssetLib.Editor.FileNameList.CreateAllFileNameListFromAssetsPath(t_local_path);
+									foreach(string t_path_local in t_filelist_local){
+										string t_key = t_path_local.Substring(t_local_path.Length + 1);
+										if(t_structure_list.TryGetValue(t_key,out CompareItem t_compareitem) == true){
+											t_compareitem.path_local = t_path_local;
+										}else{
+											t_structure_list.Add(t_key,new CompareItem(){
+												path_local = t_path_local,
+												path_package = null
+											});
+										}
+									}
+								}
+
+								foreach(System.Collections.Generic.KeyValuePair<string,CompareItem> t_item in t_structure_list){
 									switch(t_item.Key){
 									case "package-lock.json":
 									case "package-lock.json.meta":
