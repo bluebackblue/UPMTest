@@ -16,22 +16,26 @@ namespace BlueBack.Standalone.Editor
 	*/
 	public static class InstallAllPackage
 	{
+		/** LIST_ALIGMENT
+		*/
+		private const int LIST_ALIGMENT = 3;
+
 		/** LIST
 		*/
 		private readonly static string[] LIST = new string[]{
-			"blueback.assetlib",			"AssetLib",
-			"blueback.audio",				"Audio",
-			"blueback.code",				"Code",
-			"blueback.excel",				"Excel",
-			"blueback.jsonitem",			"JsonItem",
-			"blueback.mouse",				"Mouse",
-			"blueback.pad",					"Pad",
-			"blueback.scene",				"Scene",
-			"blueback.slackwebapi",			"SlackWebApi",
-			"blueback.testlib",				"TestLib",
-			"blueback.timescale",			"TimeScale",
-			"blueback.unityplayerloop",		"UnityPlayerLoop",
-			"blueback.upmversionmanager",	"UpmVersionManager",
+			"blueback.assetlib",			"UpmAssetLib",			"BlueBackAssetLib/Assets/UPM",
+			"blueback.audio",				"UpmAudio",				"BlueBackAudio/Assets/UPM",
+			"blueback.code",				"UpmCode",				"BlueBackCode/Assets/UPM",
+			"blueback.excel",				"UpmExcel",				"BlueBackExcel/Assets/UPM",
+			"blueback.jsonitem",			"UpmJsonItem",			"BlueBackJsonItem/Assets/UPM",
+			"blueback.mouse",				"UpmMouse",				"BlueBackMouse/Assets/UPM",
+			"blueback.pad",					"UpmPad",				"BlueBackPad/Assets/UPM",
+			"blueback.scene",				"UpmScene",				"BlueBackScene/Assets/UPM",
+			"blueback.slackwebapi",			"UpmSlackWebApi",		"BlueBackSlackWebApi/Assets/UPM",
+			"blueback.testlib",				"UpmTestLib",			"BlueBackTestLib/Assets/UPM",
+			"blueback.timescale",			"UpmTimeScale",			"BlueBackTimeScale/Assets/UPM",
+			"blueback.unityplayerloop",		"UpmUnityPlayerLoop",	"BlueBackUnityPlayerLoop/Assets/UPM",
+			"blueback.upmversionmanager",	"UpmVersionManager",	"BlueBackUpmVersionManager/Assets/UPM",
 		};
 
 		/** AUTHER
@@ -40,7 +44,7 @@ namespace BlueBack.Standalone.Editor
 
 		/** URL
 		*/
-		private const string URL = "https://github.com/<<Auther>>/<<Name>>.git?path=unity_<<Name>>/Assets/UPM<<Version>>";
+		private const string URL = "https://github.com/<<Auther>>/<<Repos>>.git?path=<<Path>><<Version>>";
 
 		/** MenuITem_BlueBackl_InstallAllPackage
 
@@ -58,17 +62,17 @@ namespace BlueBack.Standalone.Editor
 			}
 
 			//一旦削除。
-			for(int ii=0;ii<(LIST.Length / 2);ii++){
-				t_text = RemovePackage(t_text,LIST[ii*2]);
+			for(int ii=0;ii<(LIST.Length / LIST_ALIGMENT);ii++){
+				t_text = RemovePackage(t_text,LIST[ii * LIST_ALIGMENT + 0]);
 			}
 
 			//追加。
-			for(int ii=0;ii<(LIST.Length / 2);ii++){
-				string t_url = URL.Replace("<<Auther>>",AUTHER).Replace("<<Name>>",LIST[ii*2+1]);
+			for(int ii=0;ii<(LIST.Length / LIST_ALIGMENT);ii++){
+				string t_url = URL.Replace("<<Auther>>",AUTHER).Replace("<<Repos>>",LIST[ii * LIST_ALIGMENT + 1]).Replace("<<Path>>",LIST[ii * LIST_ALIGMENT + 2]);
 
 				//リリース名がバージョン。
 				{
-					string t_version = GetLastReleaseNameFromGitHub.Connect(AUTHER,LIST[ii*2+1]);
+					string t_version = GetLastReleaseNameFromGitHub.Connect(AUTHER,LIST[ii * LIST_ALIGMENT + 1]);
 					if(t_version == null){
 						//アクセス制限にかかった。
 						t_url = t_url.Replace("<<Version>>","");
@@ -79,11 +83,7 @@ namespace BlueBack.Standalone.Editor
 					}
 				}
 
-				#if(true)
-				t_text = AddPackage(t_text,LIST[ii*2],t_url);
-				#else
-				UnityEditor.PackageManager.Client.Add(t_url);
-				#endif
+				t_text = AddPackage(t_text,LIST[ii * LIST_ALIGMENT + 0],t_url);
 			}
 
 			//書き込み。
