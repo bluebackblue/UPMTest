@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "blueback.versionmanager": "https://github.com/bluebackblue/UpmVersionManager.git?path=BlueBackVersionManager/Assets/UPM#0.0.51",
     "blueback.unityplayerloop": "https://github.com/bluebackblue/UpmUnityPlayerLoop.git?path=BlueBackUnityPlayerLoop/Assets/UPM#0.0.14",
     "blueback.timescale": "https://github.com/bluebackblue/UpmTimeScale.git?path=BlueBackTimeScale/Assets/UPM#0.0.14",
     "blueback.testlib": "https://github.com/bluebackblue/UpmTestLib.git?path=BlueBackTestLib/Assets/UPM#0.0.22",
@@ -12,7 +13,6 @@
     "blueback.code": "https://github.com/bluebackblue/UpmCode.git?path=BlueBackCode/Assets/UPM#0.0.16",
     "blueback.audio": "https://github.com/bluebackblue/UpmAudio.git?path=BlueBackAudio/Assets/UPM#0.0.11",
     "blueback.assetlib": "https://github.com/bluebackblue/UpmAssetLib.git?path=BlueBackAssetLib/Assets/UPM#0.0.45",
-    "blueback.versionmanager": "https://github.com/bluebackblue/UpmVersionManager.git?path=BlueBackVersionManager/Assets/UPM#0.0.51",
     "com.unity.ide.visualstudio": "2.0.11",
     "com.unity.inputsystem": "1.1.0-pre.5",
     "com.unity.ugui": "1.0.0",

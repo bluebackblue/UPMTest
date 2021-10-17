@@ -35,7 +35,7 @@ namespace BlueBack.Standalone.Editor
 			"blueback.testlib",				"UpmTestLib",			"BlueBackTestLib/Assets/UPM",
 			"blueback.timescale",			"UpmTimeScale",			"BlueBackTimeScale/Assets/UPM",
 			"blueback.unityplayerloop",		"UpmUnityPlayerLoop",	"BlueBackUnityPlayerLoop/Assets/UPM",
-			"blueback.upmversionmanager",	"UpmVersionManager",	"BlueBackVersionManager/Assets/UPM",
+			"blueback.versionmanager",		"UpmVersionManager",	"BlueBackVersionManager/Assets/UPM",
 		};
 
 		/** AUTHER
