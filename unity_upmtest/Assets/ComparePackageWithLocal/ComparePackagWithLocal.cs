@@ -64,6 +64,7 @@ namespace ComparePackagWithLocal
 							{
 								switch(t_packageinfo.name){
 								case "blueback.assetlib":			t_local_path += "..\\..\\..\\"	+	"UpmAssetLib"			+	"\\"	+"BlueBackAssetLib"				+ "\\Assets\\UPM";break;
+								case "blueback.audio":				t_local_path += "..\\..\\..\\"	+	"UpmAudio"				+	"\\"	+"BlueBackAudio"				+ "\\Assets\\UPM";break;
 								case "blueback.code":				t_local_path += "..\\..\\..\\"	+	"UpmCode"				+	"\\"	+"BlueBackCode"					+ "\\Assets\\UPM";break;
 								case "blueback.excel":				t_local_path += "..\\..\\..\\"	+	"UpmExcel"				+	"\\"	+"BlueBackExcel"				+ "\\Assets\\UPM";break;
 								case "blueback.jsonitem":			t_local_path += "..\\..\\..\\"	+	"UpmJsonItem"			+	"\\"	+"BlueBackJsonItem"				+ "\\Assets\\UPM";break;
@@ -84,7 +85,7 @@ namespace ComparePackagWithLocal
 								System.Collections.Generic.Dictionary<string,CompareItem> t_structure_list = new System.Collections.Generic.Dictionary<string,CompareItem>();
 
 								{
-									System.Collections.Generic.List<string> t_filelist_package = BlueBack.AssetLib.Editor.FileNameList.CreateAllFileNameListFromFullPath(t_packageinfo.resolvedPath);
+									System.Collections.Generic.List<string> t_filelist_package = BlueBack.AssetLib.Editor.CreateFileNameListWithFullPath.CreateAll(t_packageinfo.resolvedPath);
 									foreach(string t_path_package in t_filelist_package){
 										string t_key = t_path_package.Substring(t_packageinfo.resolvedPath.Length + 1);
 										t_structure_list.Add(t_key,new CompareItem(){
@@ -95,7 +96,7 @@ namespace ComparePackagWithLocal
 								}
 
 								{
-									System.Collections.Generic.List<string> t_filelist_local =  BlueBack.AssetLib.Editor.FileNameList.CreateAllFileNameListFromAssetsPath(t_local_path);
+									System.Collections.Generic.List<string> t_filelist_local =  BlueBack.AssetLib.Editor.CreateFileNameListWithAssetsPath.CreateAll(t_local_path);
 									foreach(string t_path_local in t_filelist_local){
 										string t_key = t_path_local.Substring(t_local_path.Length + 1);
 										if(t_structure_list.TryGetValue(t_key,out CompareItem t_compareitem) == true){
@@ -132,8 +133,8 @@ namespace ComparePackagWithLocal
 											case ".mat":
 											case ".mixer":
 												{
-													string t_text_package = BlueBack.AssetLib.Editor.LoadText.LoadTextFromFullPath(t_item.Value.path_package,null).Replace("\r\n","\n");
-													string t_text_local = BlueBack.AssetLib.Editor.LoadText.LoadTextFromAssetsPath(t_item.Value.path_local,null).Replace("\r\n","\n");
+													string t_text_package = BlueBack.AssetLib.Editor.LoadTextWithFullPath.Load(t_item.Value.path_package).Replace("\r\n","\n");
+													string t_text_local = BlueBack.AssetLib.Editor.LoadTextWithAssetsPath.Load(t_item.Value.path_local).Replace("\r\n","\n");
 													if(t_text_package != t_text_local){
 														for(int ii=0;ii<t_text_package.Length;ii++){
 															if(t_text_package[ii] != t_text_local[ii]){
@@ -148,8 +149,8 @@ namespace ComparePackagWithLocal
 												}break;
 											default:
 												{
-													byte[] t_binary_package = BlueBack.AssetLib.Editor.LoadBinary.LoadBinaryFromFullPath(t_item.Value.path_package);
-													byte[] t_binary_local = BlueBack.AssetLib.Editor.LoadBinary.LoadBinaryFromAssetsPath(t_item.Value.path_local);
+													byte[] t_binary_package = BlueBack.AssetLib.Editor.LoadBinaryWithFullPath.Load(t_item.Value.path_package);
+													byte[] t_binary_local = BlueBack.AssetLib.Editor.LoadBinaryWithAssetsPath.Load(t_item.Value.path_local);
 
 													if((t_binary_package != null)&&(t_binary_local != null)){
 														if(t_binary_package.Length == t_binary_local.Length){
