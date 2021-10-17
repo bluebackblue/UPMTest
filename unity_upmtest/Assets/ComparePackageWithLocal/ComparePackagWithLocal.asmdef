@@ -16,12 +16,6 @@
     ],
     "autoReferenced": true,
     "defineConstraints": [],
-    "versionDefines": [
-        {
-            "name": "blueback.assetlib",
-            "expression": "",
-            "define": "DEF_BLUEBACK_ASSETLIB"
-        }
-    ],
+    "versionDefines": [],
     "noEngineReferences": false
 }

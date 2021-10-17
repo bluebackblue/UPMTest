@@ -36,11 +36,11 @@
       "hash": "6c15b308a9f83abf79fd56ae4d705beb7a202fca"
     },
     "blueback.mouse": {
-      "version": "https://github.com/bluebackblue/UpmMouse.git?path=BlueBackMouse/Assets/UPM#0.0.17",
+      "version": "https://github.com/bluebackblue/UpmMouse.git?path=BlueBackMouse/Assets/UPM#0.0.18",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "7097ebcba2d1a06c39efbc3e4dc4486cac174d3e"
+      "hash": "9daf7be52bf03dfa536ef6c767b8d8248688d9c9"
     },
     "blueback.pad": {
       "version": "https://github.com/bluebackblue/UpmPad.git?path=BlueBackPad/Assets/UPM#0.0.13",
