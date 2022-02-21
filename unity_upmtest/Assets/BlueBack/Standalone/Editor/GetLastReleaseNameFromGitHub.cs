@@ -1,9 +1,9 @@
 
 
 /**
- * Copyright (c) blueback
- * Released under the MIT License
- * @brief 最新リリース名。取得。
+	Copyright (c) blueback
+	Released under the MIT License
+	@brief 最新リリース名。取得。
 */
 
 

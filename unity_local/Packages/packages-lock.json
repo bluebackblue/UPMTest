@@ -24,6 +24,12 @@
       "source": "local",
       "dependencies": {}
     },
+    "blueback.gl": {
+      "version": "file:../../../UpmGl/BlueBackGl/Assets/UPM",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
     "blueback.jsonitem": {
       "version": "file:../../../UpmJsonItem/BlueBackJsonItem/Assets/UPM",
       "depth": 0,
@@ -38,6 +44,12 @@
     },
     "blueback.pad": {
       "version": "file:../../../UpmPad/BlueBackPad/Assets/UPM",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
+    "blueback.poollist": {
+      "version": "file:../../../UpmPoolList/BlueBackPoolList/Assets/UPM",
       "depth": 0,
       "source": "local",
       "dependencies": {}
@@ -86,7 +98,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.visualstudio": {
-      "version": "2.0.11",
+      "version": "2.0.12",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -95,7 +107,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.inputsystem": {
-      "version": "1.1.0-pre.5",
+      "version": "1.2.0",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -103,8 +115,15 @@
       },
       "url": "https://packages.unity.com"
     },
+    "com.unity.mathematics": {
+      "version": "1.2.5",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
     "com.unity.test-framework": {
-      "version": "1.1.27",
+      "version": "1.1.30",
       "depth": 1,
       "source": "registry",
       "dependencies": {
