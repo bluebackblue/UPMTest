@@ -1,0 +1,1 @@
+{"syslog":{"tag":"Unity","server_port":514l,"server_name":"127.0.0.1","enable":false},"file":{"output_filename":"consolelog.txt","enable":false}}

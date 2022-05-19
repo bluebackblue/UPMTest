@@ -18,6 +18,18 @@
       "source": "local",
       "dependencies": {}
     },
+    "blueback.console": {
+      "version": "file:../../../UpmConsole/BlueBackConsole/Assets/UPM",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
+    "blueback.drawinstance": {
+      "version": "file:../../../UpmDrawInstance/BlueBackDrawInstance/Assets/UPM",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
     "blueback.excel": {
       "version": "file:../../../UpmExcel/BlueBackExcel/Assets/UPM",
       "depth": 0,
@@ -36,8 +48,20 @@
       "source": "local",
       "dependencies": {}
     },
+    "blueback.install": {
+      "version": "file:../../../UpmInstall/BlueBackInstall/Assets/UPM",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
     "blueback.jsonitem": {
       "version": "file:../../../UpmJsonItem/BlueBackJsonItem/Assets/UPM",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
+    "blueback.math": {
+      "version": "file:../../../UpmMath/BlueBackMath/Assets/UPM",
       "depth": 0,
       "source": "local",
       "dependencies": {}
@@ -56,6 +80,12 @@
     },
     "blueback.poollist": {
       "version": "file:../../../UpmPoolList/BlueBackPoolList/Assets/UPM",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
+    "blueback.request": {
+      "version": "file:../../../UpmRequest/BlueBackRequest/Assets/UPM",
       "depth": 0,
       "source": "local",
       "dependencies": {}
@@ -90,6 +120,12 @@
       "source": "local",
       "dependencies": {}
     },
+    "blueback.variabledigit": {
+      "version": "file:../../../UpmVariableDigit/BlueBackVariableDigit/Assets/UPM",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
     "blueback.versionmanager": {
       "version": "file:../../../UpmVersionManager/BlueBackVersionManager/Assets/UPM",
       "depth": 0,
@@ -97,7 +133,7 @@
       "dependencies": {}
     },
     "com.unity.burst": {
-      "version": "1.6.4",
+      "version": "1.7.0",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -131,14 +167,14 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.mathematics": {
-      "version": "1.2.5",
+      "version": "1.2.6",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
     "com.unity.test-framework": {
-      "version": "1.1.30",
+      "version": "1.1.31",
       "depth": 1,
       "source": "registry",
       "dependencies": {
