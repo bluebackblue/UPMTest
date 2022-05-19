@@ -132,6 +132,12 @@
       "source": "local",
       "dependencies": {}
     },
+    "blueback.vosk": {
+      "version": "file:../../../UpmVosk/BlueBackVosk/Assets/UPM",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
     "com.unity.burst": {
       "version": "1.7.0",
       "depth": 0,
