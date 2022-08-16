@@ -9,12 +9,12 @@
 
 /** BlueBack.Standalone.Editor
 */
-#if(UNITY_EDITOR)
+#if(UNITY_EDITOR) && false
 namespace ComparePackagWithLocal
 {
 	/** DeletePackageLock
 	*/
-	public class ComparePackagWithLocal
+	public static class ComparePackagWithLocal
 	{
 		/** CompareItem
 		*/
