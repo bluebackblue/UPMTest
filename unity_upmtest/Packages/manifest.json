@@ -4,6 +4,7 @@
     "blueback.audio": "https://github.com/bluebackblue/UpmAudio.git?path=BlueBackAudio/Assets/UPM",
     "blueback.code": "https://github.com/bluebackblue/UpmCode.git?path=BlueBackCode/Assets/UPM",
     "blueback.console": "https://github.com/bluebackblue/UpmConsole.git?path=BlueBackConsole/Assets/UPM",
+    "blueback.debug": "https://github.com/bluebackblue/UpmDebug.git?path=BlueBackDebug/Assets/UPM",
     "blueback.drawinstance": "https://github.com/bluebackblue/UpmDrawInstance.git?path=BlueBackDrawInstance/Assets/UPM",
     "blueback.excel": "https://github.com/bluebackblue/UpmExcel.git?path=BlueBackExcel/Assets/UPM",
     "blueback.font": "https://github.com/bluebackblue/UpmFont.git?path=BlueBackFont/Assets/UPM",

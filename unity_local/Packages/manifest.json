@@ -4,6 +4,7 @@
     "blueback.audio": "file:../../../UpmAudio/BlueBackAudio/Assets/UPM",
     "blueback.code": "file:../../../UpmCode/BlueBackCode/Assets/UPM",
     "blueback.console": "file:../../../UpmConsole/BlueBackConsole/Assets/UPM",
+    "blueback.debug": "file:../../../UpmDebug/BlueBackDebug/Assets/UPM",
     "blueback.drawinstance": "file:../../../UpmDrawInstance/BlueBackDrawInstance/Assets/UPM",
     "blueback.excel": "file:../../../UpmExcel/BlueBackExcel/Assets/UPM",
     "blueback.font": "file:../../../UpmFont/BlueBackFont/Assets/UPM",
